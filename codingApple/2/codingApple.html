@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p id ="title">Alert 박스</p>
+        <button onclick="알림창열기('none')"> X </button>
+    </div>
+
+    <button onclick="alarm('아이디를 입력하지 않으셨습니다.')">아이디</button>
+    <button onclick="alarm('비밀번호를 입력하지 않으셨습니다.')">비번</button>
+
+    <script>
+        function alarm(num) {
+            document.getElementById('alert').style.display = 'block';
+            document.getElementById('alert').innerHTML = num;
+        }
+        
+
+        /*파라미터, 인자, UI 재활용이 가능*/
+
+    </script>
+</body>
+</html>

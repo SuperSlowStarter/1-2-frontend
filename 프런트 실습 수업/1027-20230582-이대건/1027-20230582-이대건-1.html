@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>도서대출 기한</title>
+    <script>
+        function checkDate() {
+            let s = document.getElementById("pdate").value;
+            let pdate = new Date(s); // 구입일자
+            let today = new Date(); // 현재 일자
+
+            let diff = today.getTime() - pdate.getTime(); //밀리초로 계산하기
+            let days = Math.floor(diff / (1000*60*60*24)); // 단위로 나눠서 날짜로 계산하기
+            if (days > 30) {
+                alert("교환 기한이 지났습니다.");
+                document.getElementsByTagName("p")[0].innerHTML = "교환 기한이 지났습니다.";
+            }
+            else
+                alert("교환이 가능합니다.");
+                document.querySelector("p").innerHTML = "교환이 가능합니다.";
+        }
+    </script>
+</head>
+<body>
+    구입날짜 : 
+    <input type="date" id="pdate">
+    <button onclick="checkDate()">검사</button>
+    <p></p>
+</body>
+</html>

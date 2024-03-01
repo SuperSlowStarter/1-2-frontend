@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>종합장</title>
+    <!-- <link rel="stylesheet" href="css/css.css" type="text"> -->
+    <!-- <script src="node.js"></script> -->
+</head>
+<body>
+    <input type="text" id = 'box'>
+    <button onclick="cliccking()">눌러보셈</button>
+    <script>
+        let valu;
+        let veer = [10,20,30,40,50,60,70,80,90,100];
+        // function cliccking () {
+        //     valu = document.getElementById('box').value;
+        //     document.write(valu);
+        // }
+        let cliccking = () => {
+            valu = document.getElementById('box').value;
+            document.write(valu);
+        }
+        for (let i=0; i<10; i++) {
+            document.write(veer[i]+' ');
+        }
+        if (veer[9] == 100) {
+            document.write('이게 틀릴거같냐');
+        }
+        
+        while(1) {
+            let frompt = prompt('아무거나 입력해보던가');
+            switch(frompt) {
+                case '다크소울':
+                    alert('엘든링이 더 재밌음');
+                    break;
+                case '야스오':
+                    alert('야소충 나가라');
+                    break;
+                case '페이커':
+                    alert('Unkilleable Demon King');
+                    break;
+            }
+
+            if (frompt == 'exit') {
+                break;
+            }
+            else if (frompt == 'continue') {
+                continue;
+            }
+        }
+        
+    </script>
+</body>
+</html>

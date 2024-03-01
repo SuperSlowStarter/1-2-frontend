@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마우스 이벤트</title>
+</head>
+<body>
+    <h2>노란색 영역에 마우스를 올려주세요</h2>
+    <div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+        style="background-color: yellow; width: 200px; height: 50px;">
+    </div>
+    <script>
+        function mouseOver(obj) {
+            obj.style = "background-color:skyblue; width:200px; height:50px;";
+            obj.innerHTML = "감사합니다.";
+        }
+        function mouseOut(obj) {
+            obj.style = "border:2px dotted red; width:200px; height:50px;";
+            obj.innerHTML = "마우스를 다시 올려주세요!";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>짝수/홀수 유무와 1~n 까지의 합계</title>
+    <style>
+        body{
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>짝수일까, 홀수일까</h2>
+    <script>
+        let sum = 0;
+        let num = prompt("숫자를 입력하시오.","");
+
+        for(var i = 1; i <= num; i++) {
+            if ((num % 2 == 0 && i % 2 == 0) || (num % 2 != 0 && i % 2 != 0)) {
+                sum += i;
+            }
+        }
+
+        if (num % 2 == 0) {
+            document.write(num + "는 짝수이고, 1 ~ " + num + "까지의 짝수의 합은 " + sum + "입니다.");
+        } else {
+            document.write(num + "는 홀수이고, 1 ~ " + num + "까지의 홀수의 합은 " + sum + "입니다.");
+        }
+        document.write("<br><br>[20230582 - 이대건]")
+    </script>
+</body>
+</html>

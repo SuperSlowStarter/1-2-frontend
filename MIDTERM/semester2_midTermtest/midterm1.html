@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>할인 가격 계산기</title>
+</head>
+<body>
+    <script>
+        let originPrice, bargainRate, result;
+        function getPrice() {
+            let var1 = prompt('원가를 입력해주세요 : ');
+            return var1;
+        }
+        function getRate() {
+            let var2 = prompt('할인율을 입력해주세요 : ');
+            return var2;
+        }
+        let calc = function (vari1, vari2) {
+            let end = vari1 * (1 - 0.01*vari2);
+
+            document.write('원가는 : ' + originPrice + ' 할인율은 : ' + bargainRate + ' 결과는 : ' + end);
+        }
+        
+    </script>
+    <button onclick="originPrice = getPrice()">원가 받기</button>
+    <button onclick="bargainRate = getRate()">할인율 받기</button>
+    <button onclick="calc(originPrice, bargainRate)">계산하기</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>할인 가격 계산기</title>
+</head>
+<body>
+    <script>
+        let rate;
+        let afterPrice;
+
+        function getRate () {
+            let percent = prompt("몇 %할인받으실 건가요?");
+            alert("할인율은 : " + percent + "%");
+            rate = parseFloat(percent); // 입력받은 문자열을 숫자로 변환
+            return rate;
+        }
+
+        function calculate (before) {
+            afterPrice = before * (1 - rate*0.01);
+            return afterPrice;
+        }
+        
+        let originPrice = prompt("원가를 입력해주세요.");
+        document.write("원가: " + originPrice + "<br>");
+    </script>
+    <button onclick="getRate()">할인율 받기</button>
+    <button onclick="calculate(originPrice)">계산하기</button>
+    
+    <script>
+        document.write("할인율: " + rate + "%<br>");
+        document.write("계산 후 금액: " + afterPrice);
+    </script>
+</body>
+</html>

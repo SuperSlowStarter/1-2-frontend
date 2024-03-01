@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>입력받은 숫자의 배수 출력, 및 개수 구하기</title>
+    <style>
+        body {
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>1~100 사이에 입력 받은 숫자의 배수 찾기</h2>
+    <script>
+        let num = prompt("1부터 100이하의 정수를 입력해주세요 : ", "");
+        if (num >= 1 && num <= 100) {
+            let count = 0;
+            for (let i = 1; i <= 100; i++) {
+                if (i % num == 0) {
+                    document.write(i + ", ");
+                    count++;
+                }
+            }
+
+            document.write("<br><br>" + num + "의 배수의 개수: " + count);
+            document.write("<br><br>[20230582 - 이대건]");
+        } else {
+            document.write("1부터 100사이의 정수를 입력해 주세요!!");
+        }
+    </script>
+</body>
+</html>

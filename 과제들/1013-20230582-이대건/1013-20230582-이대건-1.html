@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수의 인수와 매개변수</title>
+    <script>
+        function greeting(name, position) {
+            alert(name + " " + position + "님을 환영합니다.");
+        }
+
+        function infor() {
+            let name = prompt("성함을 입력해주세요!", "");
+            let addr = prompt("주소를 알려주세요!!","")
+
+            document.write("사용자님의 성함은 " + name + "입니다.<br>");
+            document.write(name + " 님의 주소는 " + addr + "입니다.");
+        }
+    </script>
+</head>
+<body>
+    <button onclick = "greeting('청운이', '학생')">눌러보세요!</button>
+    <button onclick = "infor()">개인정보</button>
+</body>
+</html> 

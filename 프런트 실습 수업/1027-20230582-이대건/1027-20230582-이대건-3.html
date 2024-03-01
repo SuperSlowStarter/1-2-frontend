@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>객체 - 디지털 시계</title>
+</head>
+<body>
+	<h2 id="clock"></h2>
+	<script>
+		function setClock() {
+			let now = new Date();
+			let s = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+			document.getElementById('clock').innerHTML = s;
+			// document.querySelector('#clock').innerHTML = s;
+			// document.getElementsByTagName('h2')[0].innerHTML = s;
+			// document.querySelector('h2').innerHTML = s;
+			setTimeout('setClock()',1000);
+		}
+		setClock();
+	</script>
+</body>
+</html>
